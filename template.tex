@@ -3,7 +3,7 @@
 % <<< packages
 
 % `size` and `orientation` are options for `beamerposter`.
-\usetheme[size=a4,orientation=portrait]{hriaposter}
+\usetheme[size=a4,orientation=portrait,scale=1.35]{hriaposter}
 
 % load math packages
 \usepackage{amsmath}
@@ -11,9 +11,6 @@
 % load more packages
 \usepackage{hyperref}
 \usepackage{booktabs}
-
-% for displaying code (using `minted` will probably give better results)
-\usepackage{listings}
 
 % for qr code in header
 % \usepackage{qrcode}
@@ -24,7 +21,7 @@
 
 % <<< formatting
 
-% use numbers for footnotes inside columns
+% use numbers for footnotes
 % \renewcommand\thempfootnote{\arabic{mpfootnote}}
 
 % add custom logos
@@ -65,7 +62,7 @@
 
 % NOTE: each frame will create a new page with a new poster, so you probably do
 % not want more of them in a single file.
-\begin{frame}[fragile]
+\begin{frame}[t,fragile]
 
 \begin{block}{Introduction}
     The \textbf{HRIA Poster Theme} is a modern theme based on \texttt{beamerposter} that
