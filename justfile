@@ -3,7 +3,7 @@ TEXOUTDIR := "latex.out"
 TEXFLAGS := "-pdflua -output-directory=" + TEXOUTDIR
 
 _default:
-    @just --list
+    @just template
 
 [private]
 pdf basename:
@@ -12,11 +12,11 @@ pdf basename:
     @cp {{ TEXOUTDIR }}/{{ basename }}.pdf .
 
 [doc("Build template example")]
-build:
+template:
     @just pdf template
 
 [doc("Compile assets for example")]
-assets: build
+assets: template
     magick \
         -verbose \
         -density 300 \
@@ -26,26 +26,6 @@ assets: build
         -sharpen 0x1.0 \
         -geometry 2048x \
         assets/template.png
-
-[doc("Swap the blue with white in a given logo")]
-white logo:
-    magick {{ logo }}.png \
-        -fuzz 10% \
-        -channel RGB \
-        -fill '#FFFFFF' -opaque '#306BB3' \
-        {{ logo }}-white.png
-
-[doc("Trim a given logo")]
-trim logo:
-    magick {{ logo }}.png -trim +repage {{ logo }}.png
-
-[doc("Trim and square a given logo")]
-square logo:
-    magick {{ logo }}.png -trim +repage \
-        -set option:side "%[fx:max(w,h)]" \
-        -gravity center -background none -extent "%[side]x%[side]" \
-        -resize 1024x1024 \
-        {{ logo }}.png
 
 [doc("Update license text")]
 license:

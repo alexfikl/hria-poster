@@ -1,0 +1,139 @@
+\documentclass[final]{beamer}
+
+% <<< packages
+
+% `size` and `orientation` are options for `beamerposter`.
+\usetheme[size=a4,orientation=portrait]{hriaposter}
+
+% load math packages
+\usepackage{amsmath}
+
+% load more packages
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+% for displaying code (using `minted` will probably give better results)
+\usepackage{listings}
+
+% for qr code in header
+% \usepackage{qrcode}
+
+\usepackage{sourcesanspro}
+
+% >>>
+
+% <<< formatting
+
+% use numbers for footnotes inside columns
+% \renewcommand\thempfootnote{\arabic{mpfootnote}}
+
+% add custom logos
+% \headerlogoleft{\includegraphics[width=0.08\paperwidth]{assets/logo-uvt-alt.png}}
+% \headerlogoright{\includegraphics[width=0.08\paperwidth]{assets/logo-hria-alt.png}}
+% \headerlogoright{\qrcode[height=0.06\paperwidth]{https://github.com/alexfikl/hria-poster}}
+
+% remove logos
+% \headerlogoleft{}
+% \headerlogoright{}
+
+% >>>
+
+% <<< commands
+
+% define some helpful commands
+\NewDocumentCommand \dx { O{x} } {\,\mathrm{d} #1}
+
+\RenewDocumentCommand \emph {m} {\textcolor{HRIADarkBlue}{\textbf{#1}}}
+\RenewDocumentCommand \alert {m} {\textcolor{HRIALightBlue}{\textbf{#1}}}
+
+% >>>
+
+% <<< metadata
+
+\title{West University of Timișoara: \\ A simple and modern Poster Template}
+\author{\underline{Hubert J. Farnsworth}\inst{1} \and Amy Wong-Kroker\inst{2}}
+\institute[shortinst]{\inst{1} Academy of Science, New New York \quad \inst{2} Mars University}
+
+% add content to the footer
+\footerweb{https://hria.upb.ro/}
+\footerlocation{The Academy of Science Convention, New New York --- April 9th, 3001}
+\footeremail{hubert.farnsworth@e-uvt.ro}
+
+% >>>
+
+\begin{document}
+
+% NOTE: each frame will create a new page with a new poster, so you probably do
+% not want more of them in a single file.
+\begin{frame}[fragile]
+
+\begin{block}{Introduction}
+    The \textbf{HRIA Poster Theme} is a modern theme based on \texttt{beamerposter} that
+    uses semi-official \emph{HRIA branding}\footnote{\url{https://hria.upb.ro}}. Some
+    of its elements and styling are inspired by \emph{Gemini}
+    theme\footnote{\url{https://github.com/anishathalye/gemini/}}.
+
+    \medskip
+    It comes with a few nifty features:
+    \begin{itemize}
+        \item Use of a consistent color scheme throughout.
+        \item Customized block environments.
+        \item Easy to extend and modify separate parts (header, fonts, etc).
+    \end{itemize}
+
+    \medskip
+    Separate parts are available as e.g. \texttt{\textbackslash usecolortheme\{hriaposter\}}!
+\end{block}
+
+\begin{block}{Colors and Fonts}
+    This theme uses the \emph{Adobe Source Sans Pro} font. This is a clean \emph{sans serif}
+    font from Adobe that will make your poster look cool.
+
+    \medskip
+    The theme has three standard colors:
+    \begin{itemize}
+        \item A nice \textcolor{HRIALightBlue}{\textbf{light blue}} (\texttt{HRIALightBlue}).
+        \item A bolder \textcolor{HRIADarkBlue}{\textbf{dark blue}} (\texttt{HRIADarkBlue}).
+        \item An attention grabbing \textcolor{HRIAGreen}{\textbf{green}}
+        (\texttt{HRIAGreen})!
+        \item Variants \texttt{color!x} can also be used to darken or lighten them
+    \end{itemize}
+
+    \medskip
+    These can be used for emphasizing \textcolor{HRIALightBlue}{text} or for
+    more obvious \alert{alerts}. Standard \textbf{bold} and \textit{italic} emphasis
+    can of course also be used!
+\end{block}
+
+\begin{block}{Lists, enumerations, and descriptions}
+\heading{Lists}
+
+\begin{itemize}
+    \item Itemize lists are nicely customized ...
+    \begin{itemize}
+        \item All the way down ...
+        \begin{itemize}
+            \item To the third level!
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\heading{Enumerate}
+
+\begin{enumerate}
+    \item We can also enumerate!
+    \item Many things!
+    \item It's great!
+\end{enumerate}
+
+\heading{Description}
+
+\begin{description}
+    \item[HRIA] And describe the project in exquisite detail, so that we
+        can capture all its multiline greatness!
+\end{description}
+\end{block}
+
+\end{frame}
+
+\end{document}
