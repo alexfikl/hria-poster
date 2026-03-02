@@ -34,6 +34,10 @@ license:
     cp LICENSES/MIT.txt LICENSE.MIT
     @rm -rf LICENSES
 
+[doc("Create a convenient zip file with the template files")]
+zip:
+    zip -r "$(basename $(pwd)).zip" assets *.sty template.tex
+
 [doc("Remove temporary compilation files")]
 clean:
     rm -rf {{ TEXOUTDIR }}
@@ -42,3 +46,4 @@ clean:
 [doc("Remove all generated files")]
 purge: clean
     rm -rf *.pdf
+    rm -rf *.zip
