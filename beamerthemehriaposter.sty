@@ -31,7 +31,6 @@
 \DeclareBoolOption[false]{showframe}
 \DeclareBoolOption[false]{layoutgrid}
 
-\ProcessOptionsBeamer
 \DeclareDefaultOption{\PassOptionsToPackage{\CurrentOption}{beamerposter}}
 \ProcessKeyvalOptions*
 
@@ -244,22 +243,22 @@
 % <<< itemize
 
 \setbeamertemplate{itemize item}{
-\tikz[baseline=-0.5em]{
+\tikz[baseline=-1ex]{
     % circle
     \node[
       circle,
       fill=HRIAGreen,
-      minimum size=1.5em,
+      minimum size=2ex,
       inner sep=0pt
     ] (c) {};
 
     % compute radius
-    \pgfmathsetmacro{\r}{0.075}
+    \pgfmathsetmacro{\r}{0.0125ex}
 
     % draw thick >
     \draw[
       white,
-      line width=0.25em,
+      line width=0.35ex,
       line cap=round,
       line join=round
     ] (-\r, \r) -- (\r, 0) -- (-\r, -\r);
