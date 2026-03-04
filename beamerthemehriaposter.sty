@@ -94,9 +94,9 @@
 
 \ProvideDocumentCommand \separatorcolumn {} {\begin{column}{0.025\paperwidth}\end{column}}
 
-\NewDocumentCommand \headerlogotopa  { m } {\def\hriaposter@headerlogotopa{#1}}
-\NewDocumentCommand \headerlogotopb  { m } {\def\hriaposter@headerlogotopb{#1}}
-\NewDocumentCommand \headerlogotopc  { m } {\def\hriaposter@headerlogotopc{#1}}
+\NewDocumentCommand \headerlogobottoma  { m } {\def\hriaposter@headerlogobottoma{#1}}
+\NewDocumentCommand \headerlogobottomb  { m } {\def\hriaposter@headerlogobottomb{#1}}
+\NewDocumentCommand \headerlogobottomc  { m } {\def\hriaposter@headerlogobottomc{#1}}
 \NewDocumentCommand \headerlogoleft  { m } {\def\hriaposter@headerlogoleft{#1}}
 \NewDocumentCommand \headerlogoright  { m } {\def\hriaposter@headerlogoright{#1}}
 
@@ -104,9 +104,9 @@
 
 % <<< assets
 
-\headerlogotopa{\includegraphics[width=0.15\paperheight]{assets/logo-eu-ro}}
-\headerlogotopb{\includegraphics[width=0.19\paperheight]{assets/logo-hria-ro}}
-\headerlogotopc{\includegraphics[width=0.035\paperheight]{assets/logo-gov-ro}}
+\headerlogobottoma{\includegraphics[width=0.15\paperheight]{assets/logo-eu-ro}}
+\headerlogobottomb{\includegraphics[width=0.19\paperheight]{assets/logo-hria-ro}}
+\headerlogobottomc{\includegraphics[width=0.035\paperheight]{assets/logo-gov-ro}}
 
 \headerlogoright{\includegraphics[width=0.19\paperwidth]{assets/logo-hria-ro-white}}
 \headerlogoleft{\includegraphics[width=0.13\paperwidth]{assets/logo-uvt-ro-white}}
@@ -156,20 +156,6 @@
 \setlength{\maxtitlepadding}{0.2\paperwidth}
 
 \setbeamertemplate{headline}{
-    \begin{beamercolorbox}{}
-    \vskip 3pt
-    \centering
-    \hspace{\beamer@leftmargin}
-    \hriaposter@headerlogotopa \hfill
-    \hriaposter@headerlogotopb \hfill
-    \hriaposter@headerlogotopc
-    \hspace{\beamer@rightmargin}
-    \vskip 5pt
-    \end{beamercolorbox}
-    \ifbeamercolorempty[bg]{headline rule}{}{
-        \begin{beamercolorbox}[wd=\paperwidth,colsep=0.075cm]{headline rule}
-        \end{beamercolorbox}
-    }
     \begin{beamercolorbox}{headline}
     \begin{columns}
     \begin{column}{\maxtitlepadding}
@@ -222,10 +208,9 @@
 % footline
 
 \setbeamertemplate{footline}{
+    \begin{beamercolorbox}[wd=\paperwidth,colsep=0.3ex]{headline rule}
+    \end{beamercolorbox}
     \begin{beamercolorbox}[vmode]{headline}
-        \ifbeamercolorempty[bg]{headline rule}{}{
-            \begin{beamercolorbox}[wd=\paperwidth,colsep=0.5ex]{headline rule}
-            \end{beamercolorbox}}
         \usebeamerfont{footline}
         \centering
         \vspace{1.25ex}
@@ -236,7 +221,19 @@
         \hfill
         \@ifundefined{hriaposter@footerright}{}{\hriaposter@footerright}
         \hspace{0.025\paperwidth}
-        \vspace{1.75ex}
+        \vspace{1.25ex}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=\paperwidth,colsep=0.3ex]{headline rule}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}{}
+    \vskip 3pt
+    \centering
+    \hspace{\beamer@leftmargin}
+    \hriaposter@headerlogobottoma \hfill
+    \hriaposter@headerlogobottomb \hfill
+    \hriaposter@headerlogobottomc
+    \hspace{\beamer@rightmargin}
+    \vskip 5pt
     \end{beamercolorbox}
 }
 
@@ -300,10 +297,7 @@
 
 % >>>
 
-\setbeamersize{
-    description width=0.075\paperwidth,
-}
-
+\setbeamersize{description width=5em}
 \setbeamertemplate{bibliography item}[text]
 
 % >>>
