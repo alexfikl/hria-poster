@@ -157,24 +157,23 @@
 
 \setbeamertemplate{headline}{
     \begin{beamercolorbox}{}
-    \vskip 1ex
+    \vskip 3pt
     \centering
     \hspace{\beamer@leftmargin}
     \hriaposter@headerlogotopa \hfill
     \hriaposter@headerlogotopb \hfill
     \hriaposter@headerlogotopc
     \hspace{\beamer@rightmargin}
-    \hspace{2.5em}
-    \vskip 3ex
+    \vskip 5pt
     \end{beamercolorbox}
     \ifbeamercolorempty[bg]{headline rule}{}{
-        \begin{beamercolorbox}[wd=\paperwidth,colsep=1ex]{headline rule}
+        \begin{beamercolorbox}[wd=\paperwidth,colsep=0.075cm]{headline rule}
         \end{beamercolorbox}
     }
     \begin{beamercolorbox}{headline}
     \begin{columns}
     \begin{column}{\maxtitlepadding}
-        \vskip5ex
+        \vskip 0.3cm
         \vfill
         \hspace*{1.5cm}
         \raggedright \hriaposter@headerlogoleft
@@ -182,14 +181,14 @@
     \end{column}
     \begin{column}{\dimexpr\paperwidth-\maxtitlepadding-\maxtitlepadding}
         \usebeamerfont{headline}
-        \vskip 3ex
+        \vskip 0.1cm
         \centering
         {
             \usebeamerfont{headline title}
             \usebeamercolor[fg]{headline title}
             \inserttitle
         }
-        \vspace{1em}
+        \vspace{2em}
 
         {
             \usebeamerfont{headline author}
@@ -205,16 +204,16 @@
         }
         \vspace{1em}
     \end{column}
-    \begin{column}{\dimexpr\maxtitlepadding+1.5cm}
-        \vskip5ex
+    \begin{column}{\dimexpr\maxtitlepadding+1.7cm}
+        \vskip 0.25cm
         \vfill
         \hriaposter@headerlogoright
         \vfill
     \end{column}
     \end{columns}
-    \vspace{5ex}
+    \vspace{0.3cm}
     \ifbeamercolorempty[bg]{headline rule}{}{
-        \begin{beamercolorbox}[wd=\paperwidth,colsep=1ex]{headline rule}
+        \begin{beamercolorbox}[wd=\paperwidth,colsep=0.075cm]{headline rule}
         \end{beamercolorbox}
     }
     \end{beamercolorbox}
@@ -278,7 +277,7 @@
 % <<< blocks
 
 \setbeamertemplate{block begin}{
-    \begin{adjustbox}{max width=0.98\textwidth}
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{!{\color{HRIALightBlue}{\vrule width 10pt}}>{\columncolor[gray]{0.97}}m{\textwidth}}
         \centering
         \begin{minipage}{0.96\linewidth}
@@ -287,7 +286,6 @@
             \vbox{}\vskip 0.2ex
             \insertblocktitle
         \end{beamercolorbox}
-        \vspace{1em}
         \usebeamerfont*{block text}
 }
 \setbeamertemplate{block end}{\end{minipage}\vspace{1em}\end{tabular}\end{adjustbox}\vspace*{3ex}}
