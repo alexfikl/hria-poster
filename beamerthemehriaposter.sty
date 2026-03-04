@@ -103,12 +103,16 @@
 
 % <<< assets
 
-\headerlogobottoma{\includegraphics[width=0.15\paperheight]{assets/logo-eu-ro}}
-\headerlogobottomb{\includegraphics[width=0.19\paperheight]{assets/logo-hria-ro}}
-\headerlogobottomc{\includegraphics[width=0.035\paperheight]{assets/logo-gov-ro}}
+\NewDocumentCommand \hriaincludegraphics { m m } {
+    \IfFileExists{#2}{\includegraphics[#1]{#2}}{\PackageWarning{hriaposter}{Logo file #2 not found}}
+}
 
-\headerlogoright{\includegraphics[width=0.19\paperwidth]{assets/logo-hria-ro-white}}
-\headerlogoleft{\includegraphics[width=0.13\paperwidth]{assets/logo-uvt-ro-white}}
+\headerlogobottoma{\hriaincludegraphics{width=0.15\paperheight}{assets/logo-eu-ro.png}}
+\headerlogobottomb{\hriaincludegraphics{width=0.19\paperheight}{assets/logo-hria-ro.png}}
+\headerlogobottomc{\hriaincludegraphics{width=0.035\paperheight}{assets/logo-gov-ro.jpg}}
+
+\headerlogoright{\hriaincludegraphics{height=0.65\linewidth}{assets/logo-hria-ro-white.png}}
+\headerlogoleft{\hriaincludegraphics{height=0.65\linewidth}{assets/logo-uvt-ro-white.png}}
 
 % >>>
 
@@ -160,8 +164,8 @@
     \begin{column}{\maxtitlepadding}
         \vskip 0.3cm
         \vfill
-        \hspace*{1.5cm}
-        \raggedright \hriaposter@headerlogoleft
+        \hspace*{1.5\beamer@leftmargin}
+        \hriaposter@headerlogoleft
         \vfill
     \end{column}
     \begin{column}{\dimexpr\paperwidth-\maxtitlepadding-\maxtitlepadding}
@@ -189,7 +193,7 @@
         }
         \vspace{1em}
     \end{column}
-    \begin{column}{\dimexpr\maxtitlepadding+1.7cm}
+    \begin{column}{\maxtitlepadding}
         \vskip 0.25cm
         \vfill
         \hriaposter@headerlogoright
