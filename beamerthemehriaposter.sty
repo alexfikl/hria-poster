@@ -94,21 +94,22 @@
 
 \ProvideDocumentCommand \separatorcolumn {} {\begin{column}{0.025\paperwidth}\end{column}}
 
-\NewDocumentCommand \headerlogoa  { m } {\def\hriaposter@headerlogoa{#1}}
-\NewDocumentCommand \headerlogob  { m } {\def\hriaposter@headerlogob{#1}}
-\NewDocumentCommand \headerlogoc  { m } {\def\hriaposter@headerlogoc{#1}}
-\NewDocumentCommand \headerlogod  { m } {\def\hriaposter@headerlogod{#1}}
-\NewDocumentCommand \headerlogoinstitution  { m } {\def\hriaposter@headerlogod{#1}}
+\NewDocumentCommand \headerlogotopa  { m } {\def\hriaposter@headerlogotopa{#1}}
+\NewDocumentCommand \headerlogotopb  { m } {\def\hriaposter@headerlogotopb{#1}}
+\NewDocumentCommand \headerlogotopc  { m } {\def\hriaposter@headerlogotopc{#1}}
+\NewDocumentCommand \headerlogoleft  { m } {\def\hriaposter@headerlogoleft{#1}}
+\NewDocumentCommand \headerlogoright  { m } {\def\hriaposter@headerlogoright{#1}}
 
 % >>>
 
 % <<< assets
 
-\headerlogoa{\includegraphics[width=0.15\paperheight]{assets/logo-eu-ro}}
-\headerlogob{\includegraphics[width=0.035\paperheight]{assets/logo-gov-ro}}
-\headerlogoc{\includegraphics[width=0.19\paperheight]{assets/logo-hria-ro}}
-\headerlogod{\includegraphics[width=0.14\paperheight]{assets/logo-uvt-ro}}
+\headerlogotopa{\includegraphics[width=0.15\paperheight]{assets/logo-eu-ro}}
+\headerlogotopb{\includegraphics[width=0.19\paperheight]{assets/logo-hria-ro}}
+\headerlogotopc{\includegraphics[width=0.035\paperheight]{assets/logo-gov-ro}}
 
+\headerlogoright{\includegraphics[width=0.19\paperwidth]{assets/logo-hria-ro-white}}
+\headerlogoleft{\includegraphics[width=0.13\paperwidth]{assets/logo-uvt-ro-white}}
 
 % >>>
 
@@ -159,10 +160,9 @@
     \vskip 1ex
     \centering
     \hspace{\beamer@leftmargin}
-    \hriaposter@headerlogoa \hfill
-    \hriaposter@headerlogob \hfill
-    \hriaposter@headerlogoc \hfill
-    \hriaposter@headerlogod
+    \hriaposter@headerlogotopa \hfill
+    \hriaposter@headerlogotopb \hfill
+    \hriaposter@headerlogotopc
     \hspace{\beamer@rightmargin}
     \hspace{2.5em}
     \vskip 3ex
@@ -174,6 +174,11 @@
     \begin{beamercolorbox}{headline}
     \begin{columns}
     \begin{column}{\maxtitlepadding}
+        \vskip5ex
+        \vfill
+        \hspace*{1.5cm}
+        \raggedright \hriaposter@headerlogoleft
+        \vfill
     \end{column}
     \begin{column}{\dimexpr\paperwidth-\maxtitlepadding-\maxtitlepadding}
         \usebeamerfont{headline}
@@ -200,7 +205,11 @@
         }
         \vspace{1em}
     \end{column}
-    \begin{column}{\maxtitlepadding}
+    \begin{column}{\dimexpr\maxtitlepadding+1.5cm}
+        \vskip5ex
+        \vfill
+        \hriaposter@headerlogoright
+        \vfill
     \end{column}
     \end{columns}
     \vspace{5ex}

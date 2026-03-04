@@ -34,6 +34,10 @@ license:
     cp LICENSES/MIT.txt LICENSE.MIT
     @rm -rf LICENSES
 
+[doc("Trim a given logo")]
+trim logo:
+    magick {{ logo }}.png -trim +repage {{ logo }}.png
+
 [doc("Create a convenient zip file with the template files")]
 zip:
     zip -r "$(basename $(pwd)).zip" assets *.sty template.tex
