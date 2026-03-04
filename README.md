@@ -51,8 +51,7 @@ The following helper macros are defined for some standard functionality.
 | `\footername`                     | Presenter or institution name (on the right) |
 | `\heading`                        | A macro that adds a small heading inside blocks |
 | `\separatorcolumn`                | Adds a standardized spacing between columns |
-| `\headerlogoleft`                 | Left-hand side logo in the header     |
-| `\headerlogoright`                | Right-hand side logo in the header    |
+| `\headerlogoinstitution`          | Right-most logo in the header         |
 
 The theme also defines the following colors, if you want to make use of them
 elsewhere, for consistency.
