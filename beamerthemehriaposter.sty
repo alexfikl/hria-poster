@@ -133,6 +133,7 @@
 \setbeamerfont{footline}{size=\large,series=\bfseries}
 
 \setbeamerfont*{heading}{size=\Large, series=\bfseries}
+\setbeamerfont{caption}{size=\normalsize}
 
 \setbeamerfont{block text}{size=\Large}
 \setbeamerfont{alert text}{size=\large,series=\bfseries}
@@ -295,7 +296,7 @@
 % <<< figures
 
 % disable "Figure:" in the captions
-\setbeamertemplate{caption}{\scriptsize\insertcaption}
+\setbeamertemplate{caption}{\usebeamerfont{caption}\insertcaption}
 \setbeamertemplate{caption label separator}{}
 
 % >>>
