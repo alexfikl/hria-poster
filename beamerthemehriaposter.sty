@@ -155,6 +155,8 @@
 
 % <<< outer: header / footer
 
+\setbeamercolor{logo footer}{bg=white, fg=black}
+
 % headline
 \newlength{\maxtitlepadding}
 \setlength{\maxtitlepadding}{0.2\paperwidth}
@@ -229,7 +231,7 @@
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=\paperwidth,colsep=0.3ex]{headline rule}
     \end{beamercolorbox}
-    \begin{beamercolorbox}{}
+    \begin{beamercolorbox}[wd=\paperwidth]{logo footer}
     \vskip 3pt
     \centering
     \hspace{\beamer@leftmargin}
