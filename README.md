@@ -1,5 +1,8 @@
 # HRIA Poster
 
+[![GitHub Actions Workflow Status](https://github.com/alexfikl/hria-poster/actions/workflows/ci.yml/badge.svg)](https://github.com/alexfikl/hria-poster/actions/workflows/ci.yml)
+[![Open in Overleaf](https://img.shields.io/static/v1?label=LaTeX&message=Open-in-Overleaf&color=47a141&style=flat&logo=overleaf)](https://www.overleaf.com/docs?snip_uri=https://github.com/alexfikl/hria-poster/archive/refs/heads/main.zip)
+
 > [!WARNING]
 > This was made for a HRIA workshop and is not a general poster. If you have
 > use for a more flexible conference poster, feel free to reach out! Also,
