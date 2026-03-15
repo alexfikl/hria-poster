@@ -1,5 +1,10 @@
 # HRIA Poster
 
+> [!WARNING]
+> This was made for a HRIA workshop and is not a general poster. If you have
+> use for a more flexible conference poster, feel free to reach out! Also,
+> suggestions for modifying this towards a more official styling is very welcome.
+
 This is an unofficial poster template for the [HRIA project](https://hria.upb.ro/)
 with some logos specifically for the West University of Timișoara.
 
