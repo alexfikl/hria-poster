@@ -11,6 +11,10 @@
 This is an unofficial poster template for the [HRIA project](https://hria.upb.ro/)
 with some logos specifically for the West University of Timișoara.
 
+Templates in the same series:
+* [HRIA Beamer Presentation Template](https://github.com/alexfikl/hria-beamer)
+* [HRIA Poster Template](https://github.com/alexfikl/hria-poster)
+
 ## How it looks like
 
 ![template](template.png "template")
