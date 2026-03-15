@@ -16,7 +16,7 @@ template:
     @just pdf template
 
 [doc("Compile assets for example")]
-assets: template
+preview: template
     magick \
         -verbose \
         -density 300 \
@@ -25,7 +25,7 @@ assets: template
         -flatten \
         -sharpen 0x1.0 \
         -geometry 2048x \
-        assets/template.png
+        template.png
 
 [doc("Update license text")]
 license:

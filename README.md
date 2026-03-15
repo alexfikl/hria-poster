@@ -3,6 +3,10 @@
 This is an unofficial poster template for the [HRIA project](https://hria.upb.ro/)
 with some logos specifically for the West University of Timișoara.
 
+## How it looks like
+
+![template](template.png "template")
+
 ## How to use it
 
 To use the theme, you'll need the two `sty` files and the logos from the `assets`
